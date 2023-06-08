@@ -23,6 +23,8 @@ class NotePostRequest extends FormRequest
      */
     public function rules()
     {
+        #CREACIÓN DEL FORM REQUEST VALIDATION, AL CONFIGURAR ESOS EL ESQUEMA EN LA MIGRACIÓN 
+        #COMO NULLABLES, ÚNICAMENTE REQUERIMOS QUE TENGAN UN MÁXIMO DE CARACTERES
         return [
             'title' => 'max:70',
             'content' => 'max:255'
@@ -31,6 +33,7 @@ class NotePostRequest extends FormRequest
 
     public function messages()
     {
+        #CREACIÓN DE MENSAJES CUANDO EL REQUEST HA SIDO INVALIDADO
         return [
             'title.required' => 'El :attribute es obligatorio.',
             'content.required' => 'El :attribute es obligatorio.',

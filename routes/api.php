@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+#ASIGNACION DE RUTAS, EL CONTROLADOR Y LA FUNCIÓN QUE EJECUTARÁ LA PETICIÓN
 Route::get('v1/notes',[NoteController::class, 'getAllNotes']);
 Route::post('v1/notes', [NoteController::class, 'setNote']);
 Route::put('v1/notes/{id}', [NoteController::class, 'updateNote']);

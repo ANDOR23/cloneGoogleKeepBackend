@@ -13,6 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
+        #EL ESQUEMA DE LA BASE DE DATOS, AQUÍ SE MODIFICAN CIERTOS CRITERIOS DEL CAMPO, 
+        #EJEMPLO, EL CAMPO 'TITLE' Y 'CONTENT' ADMITEN VALORES NULOS MIENTRAS QUE LOS DEMÁS NO
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
