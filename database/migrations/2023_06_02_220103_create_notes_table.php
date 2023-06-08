@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('content')->nullable();
             $table->boolean('pinned');
             $table->boolean('archived');
+            $table->string('color');
             $table->timestamps();
         });
     }

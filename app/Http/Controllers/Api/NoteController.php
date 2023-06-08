@@ -21,8 +21,9 @@ class NoteController extends Controller
         $note = new Note();
         $note->title = $request->input('title');
         $note->content = $request->input('content');
-        $note->pinned = $request->input('pinned');;
-        $note->archived = $request->input('archived');;
+        $note->pinned = $request->input('pinned');
+        $note->archived = $request->input('archived');
+        $note->color = $request->input('color');;
         $response = $note->save();
 
         if ($response){

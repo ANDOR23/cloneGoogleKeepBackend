@@ -12,6 +12,7 @@ class Note extends Model
         'title',
         'content',
         'pinned',
-        'archived'
+        'archived',
+        'color'
     ];
 }
