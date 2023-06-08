@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Note;
 use App\Http\Requests\NotePostRequest;
+use App\Jobs\DeleteRecord;
+use Illuminate\Support\Facades\Queue;
+
+use Illuminate\Support\Facades\Bus;
 
 class NoteController extends Controller
 {
@@ -23,7 +27,7 @@ class NoteController extends Controller
         $note->content = $request->input('content');
         $note->pinned = $request->input('pinned');
         $note->archived = $request->input('archived');
-        $note->color = $request->input('color');;
+        $note->color = $request->input('color');
         $response = $note->save();
 
         if ($response){

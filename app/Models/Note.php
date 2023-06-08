@@ -13,6 +13,6 @@ class Note extends Model
         'content',
         'pinned',
         'archived',
-        'color'
+        'color',
     ];
 }
